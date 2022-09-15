@@ -1,115 +1,141 @@
 
-### 鲸哩充电桩Iot+SaaS系统（v2.3.1）
-
-> 体验地址，star star ： [点我访问](https://gitee.com/dnxt111/walker.git)
-
-
-
-#### 日志记录
-
-> [v2.3.1   2022.03.01](https://gitee.com/dnxt111/walker.git) 
-
-> [v2.2.1   2022.02.15](https://gitee.com/dnxt111/walker.git)  
-
- 
-#### 一，平台简介
-鲸哩充电桩Iot+SaaS系统（v2.3.1）包括了公众号、H5、采集Server、后端平台，实现平台闭环，平台目前已经多次用于商业，完全采用Springboot、mysql、Netty、微信支付、微信退款等技术栈
-* 鲸哩充电桩Iot+SaaS系统（v2.3.1），从（采集端-用户端-运营端）全业务场景，开源版本毫无保留给个人及企业免费使用。
-* 初衷，发现很多开源的产品缺东西，比如缺公众号，比如缺硬件对接的协议，我们希开源一套只要懂java的开发人员就能进行部署使用。
-* 初心：做了很多产品项目都商业落地了但是仅仅服务商业本身无法释放产品的价值，不在重复造轮子，让更多的企业和个人能够减少投入，先star欢迎讨论交流加群，微信18601938676
-#### 二，整体设计图（流程）
-  <img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/1.jpg"/>
-
-#### 三，平台组成
+***
+***
 
 
 
 
-----
+#### 一、简介
+
+
+> 鲸哩农业SaaS系统，从（设备端-APP端-平台端-管理端）全业务场景包含设备采集系统、监控控制系统、溯源系统、专家系统、仓库系统，大屏系统，开源版本毫无保留给个人及企业免费使用。
+> 初衷，发现很多开源的产品缺东西，比如缺公众号，比如缺硬件对接的协议，我们希开源一套只要懂java的开发人员就能进行部署使用。
+> 初心：做了很多产品项目都商业落地了但是仅仅服务商业本身无法释放产品的价值，不在重复造轮子，让更多的企业和个人能够减少投入，欢迎讨论交流加群，微信18601938676  
+
+#### 二、架构图
+<table>
+    <tr>
+<img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/1-1.jpg"/>
+    </tr>
+</table>
+
+#### 三、软件架构
+```
+* APP端: 安卓系统/ios/公众号/小程序
+* 平台端：Springboot Mybatis Mysql vue Netty Redis(可选)/集群版本SpringCloud
+* 管理端：Springboot Mybatis Mysql vue
+* 摄像头：接入宇视、海康摄像头
+```
+#### 四、通讯协议（软硬间通讯）
+```
+支持两种方式：MQTT协议，TCP协议(常用)
+```
+<table>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/2-xieyitu.jpg"/></td>
+    </tr>
+</table>
+
+#### 五、产品功能
+
+<img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/3-gongnengtu.jpg" />
+
+---
+***
 
 ```
-* 采集端：使用Netty采集设备信息
-* 用户端：使用小程序/H5作为载体
-* 运营端：运行管理平台数据
+采集系统：使用MQQT、TCP协议进行数据通讯采集硬件的信息
+监控控制系统：主要分为设备的控制和视频监控如引入海康、宇视的视频
+溯源系统：采集录入各个阶段的农产品生长销售信息
+专家系统：提供行业专家实时讨论咨询
+大屏系统：完整展示平台采集信息分析以及预警信息、设备状态等
 ```
-#### 四，软件架构
-```
-* 采集端：Netty、MQTT负责采集设备数据
-* 用户端：①vue（前端） ②微信公众号API、SpringBoot、Mybatis(后端)
-* 运行端：①vue-admin-template(前端) ②SpringBoot、Mybatis（后端）
-* 数据库：MYSQL
-```
-#### 五，代码结构
-```
-└─ jingli                                                鲸哩充电桩Iot+SaaS系统（v2.3.1）
-    ├─ open-smart-charge-operator-back                   运营端：接口
-    ├─ open-smart-charge-operator-front                  运营端：前端
-    ├─ open-smart-charge-wechat-font                     用户端：前端
-    └─ open-smart-charge-wechat-service                  ①采集端：Netty ②用户端：后端 ③用户端：微信API 
-        ├─ com.walker.netty                              ①采集端：Netty
-        ├─ com.walker.web                                ②用户端：后端
-        ├─ com.walker.wx                                 ③用户端：微信API
-```
-
-#### 六，产品功能
-
-##### 整体功能说明
-第一部分平台用户核心流程说明：
-    用户使用微信公众号扫描设备，选择端口，
-    选择充电时长微信支付费用或选择设备充电完成自动扣款两种模式，
-    插上充电口充电。
-第二部分代理商saas模式说明（可选）：
-    平台开发代理商模式即代理商自行购买设备，代理商自行设置收费模式、自行计费、以及设备的管理等功能。
-
-##### 特别说明
-目前产品已经落地实施，为了满足实际的应用场景，我们根据使用需求进行了大量的细节修改比如运营端进行设备退费，细节做了很多，满足实际场景需要。
-
-#### 七，团队计划
+#### 六、团队计划
 ```
 - 用心做产品，不以赚钱为目的。
-- 搭建基础性行者物联网快速开发平台。
+- 搭建基础性鲸哩物联网快速开发平台。
 - 软件架构升级SpringCloud/产品细节优化
-- 推广促进更多厂家和硬件开发者接入鲸哩充电桩Iot+SaaS系统（v2.3.1）
-- 以前做过：智能充电桩云平台，AI计算中心，智慧农业，智慧工业，高效节水，水肥一体化，污水处理，计量计费，水质检测，智慧大棚，农业项目
+- 推广促进更多厂家和硬件开发者接入鲸哩智慧农业物联网云平台
+- 以前做过：智慧农业，智能充电桩云平台，AI计算中心，智慧农业，智慧工业，高效节水，水肥一体化，污水处理，计量计费，水质检测，智慧大棚，农业项目
 ```
-#### 八，部分截图
-##### 后台
+#### 七、如何部署
+```---
+请参考每个工程都有READEME.md文档（详细的开发性文档）
+- 1. 导入MySQL数据库，从MySQLw文件夹中找到v3.0_zhny.sql导入到数据库中
+- 2. 导入工程
+- 3. 启动后端接口 
+- 4. 启动前端界面
+
+```
+##### 八、实施现场和PC/手机端截图
+
 <table>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/2.png"/></td>
-    </tr>
-    <tr>
-            <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/3.png"/></td>
-        </tr>
-    <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/4.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/4-Login.jpg"/></td>
     </tr>
 </table>
 
-##### 用户端
 <table>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/8sj.png"/></td>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/9.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/5-Home111111.jpg"/></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/6-xianchang-1.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/6-xianchang-2.jpg"/></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/7-shouji1.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/7-shouji2.jpg"/></td>
+     </tr>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/8-shouji3.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/9-shouji4.jpg"/></td>
     </tr>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/10.png"/></td>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/11.png"/></td>
+       <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/10-shouji5.jpg"/></td>
+       <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/11-shouji6.jpg"/></td>
+   </tr> 
+</table>
+
+
+##### 九、满足不限于以下场景
+<table>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/img/12-changjing.jpg"/></td>
     </tr>
 </table>
 
-##### 代理商
 
 
-#### 九，如何部署
-```
-请参考每个工程都有READEME.md文档（详细部署文档）
-```
-#### 十，鲸哩充电桩Iot+SaaS系统（v2.3.1）由宁夏普天动能信息技术有限公司投资建设。
-#### 十一，代码贡献者鸣谢
-京东(JD) 资深java工程师、资深java工程师 波哥、硬件工程师 亮总、前端工程师 小兵、UI设计 周同学、产品 小魏，希望更多的跟个人和企业减少重复造轮子
-减少投入。
+#### 十、代码贡献者鸣谢
+小兵（全栈工程师）、鹤文（后端资深工程师）、徐帅(前端工程师)、亮亮（嵌入式架构师）、梁明（普天动能科技 CEO）、任伟军(万达 产品经理)、赵凡（APP安卓/ios工程师）
 
-#### 十二，官方网站：
 
-http://www.nxptdn.com/
+#### 十一、案例
+
+> [宁夏贺兰渔业商业落地项目](http://www.nxptdn.com/article/29)
+
+> [广州自然微生物集装箱渔业项目](http://www.nxptdn.com/article/28)
+
+#### 十一、版本
+
+> [鲸哩农业平台v2.0.1演示地址](http://yun.nxptdn.com)
+
+> [鲸哩农业平台v2.0.1](https://gitee.com/dnxt111/wisdom-v2.0.git) 
+
+> [鲸哩农业平台v3.0.1](https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/doc/version/%E8%A1%8C%E8%80%85%E5%86%9C%E4%B8%9A%E5%B9%B3%E5%8F%B0v3.0.1.md) 
+
+#### 十二、解决方案
+
+> [鲸哩水稻灌溉解决方案](http://wenhui.nxptdn.com/article/17)  
+
+> [鲸哩智慧园林灌溉解决方案](http://wenhui.nxptdn.com/article/2) 
+
+> [鲸哩智能温室大棚解决方案](http://wenhui.nxptdn.com/article/21)  
+
+> .......
+
