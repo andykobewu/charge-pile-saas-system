@@ -82,7 +82,7 @@ JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）包括了前�
             <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E7%BB%9F%E8%AE%A1-%E7%94%A8%E6%88%B7.jpg"/></td>
         </tr>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E7%BB%9F%E8%AE%A1-%E9%94%80%E5%94%AE.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86-%E5%85%85%E7%94%B5%E6%A1%A9.jpg"/></td>
     </tr>
 </table>
 
