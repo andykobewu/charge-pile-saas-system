@@ -1,5 +1,5 @@
 
-### JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）
+### JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）
 
 > 我的车，到底该选什么功率充电桩： [点我访问](https://blog.csdn.net/Roinli/article/details/127148030?spm=1001.2014.3001.5501)
 
@@ -14,8 +14,8 @@
 
  
 #### 一，平台简介
-JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）包括了前端uniapp（公众号、H5、小程序）、采集端、运营端、代理商端、充电桩硬件（电动自行车、电动汽车），平台目前服务企业100+，采用SpringBoot、SpringCloud、MySQL、Netty、MQTT、支付宝支付、微信支付、微信退款、支付宝退款等技术栈
-1. JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1），从（采集端-用户端-商户端-平台端）全业务场景，开源版本免费提供。
+JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）包括了前端uniapp（公众号、H5、小程序）、采集端、运营端、代理商端、充电桩硬件（电动自行车、电动汽车），平台目前服务企业100+，采用SpringBoot、SpringCloud、MySQL、Netty、MQTT、支付宝支付、微信支付、微信退款、支付宝退款等技术栈
+1. JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2），从（采集端-用户端-商户端-平台端）全业务场景，开源版本免费提供。
 2. 初衷，发现很多开源的产品缺东西，比如缺公众号，比如缺硬件对接的协议，我们希开源一套只要懂java的开发人员就能进行部署使用。
 3. 初心：做了很多产品项目都商业落地了但是仅仅服务商业本身无法释放产品的价值，不在重复造轮子，让更多的企业和个人能够减少投入，先star欢迎讨论交流加群，微信18601938676
 #### 二，整体设计图（流程）
@@ -43,7 +43,7 @@ JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）包括了前�
 #### 五，代码结构
 
 ```
-└─ jingli                                                JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）
+└─ jingli                                                JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）
     ├─ open-smart-charge-operator-back                   平台端：接口
     ├─ open-smart-charge-operator-front                  平台端：前端
     ├─ open-smart-charge-wechat-font                     用户端：前端
@@ -69,43 +69,48 @@ JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）包括了前�
 - 用心做产品，不以赚钱为目的。
 - 搭建基础性行者物联网快速开发平台。
 - 软件架构升级SpringCloud/产品细节优化
-- 推广促进更多厂家和硬件开发者接入开源充电桩Saas系统（v2.3.1）
+- 推广促进更多厂家和硬件开发者接入开源充电桩Saas系统（v2.3.2）
 - 以前做过：智能充电桩云平台，AI计算中心，智慧农业，智慧工业，高效节水，水肥一体化，污水处理，计量计费，水质检测，智慧大棚，农业项目
 ```
 #### 八，部分截图
 ##### 平台端
 <table>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/2.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-0701-%E7%99%BB%E5%BD%95.jpg"/></td>
     </tr>
     <tr>
-            <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/3.png"/></td>
+            <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E7%BB%9F%E8%AE%A1-%E7%94%A8%E6%88%B7.jpg"/></td>
         </tr>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/4.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E7%BB%9F%E8%AE%A1-%E9%94%80%E5%94%AE.jpg"/></td>
     </tr>
 </table>
 
 ##### 用户端
 <table>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/8sj.png"/></td>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/9.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/1-%E4%B8%BB%E9%A1%B5.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/2-%E5%85%85%E7%94%B5%E6%A1%A9%E8%AF%A6%E7%BB%86%E9%A1%B5.jpg"/></td>
     </tr>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/10.png"/></td>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.1/img/11.png"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/4-%E6%88%91%E7%9A%84.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/5-%E4%BD%99%E9%A2%9D%E5%85%85%E5%80%BC.jpg"/></td>
     </tr>
 </table>
 
 ##### 商户端
-
+<table>
+    <tr>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/%E4%BB%A3%E7%90%86%E5%95%86-1-%E7%99%BB%E5%BD%95%E9%A1%B5.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.11%202036/%E4%BB%A3%E7%90%86%E5%95%86-3-%E8%AE%BE%E5%A4%87%E8%AF%A6%E6%83%85.jpg"/></td>
+    </tr>
+</table>
 
 #### 九，如何部署
 ```
 请参考每个工程都有READEME.md文档（详细部署文档）
 ```
-#### 十，JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.1）
+#### 十，JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）
 
 #### 十一、核心开发团队
 产品：周立
