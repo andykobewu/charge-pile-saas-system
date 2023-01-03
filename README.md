@@ -12,6 +12,16 @@
 
 > [系统更新日志](http://www.nxptdn.com/article/39) 
 
+#### 产品二维码
+
+
+<img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/%E5%85%AC%E4%BC%97%E5%8F%B7/qrcode_for_gh_3bde8ec9e891_258.jpg"/>
+
+
+<img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz%2F%E5%85%AC%E4%BC%97%E5%8F%B7%2F%E4%BA%A7%E5%93%81%20%E5%85%85%E7%94%B5%E5%8A%9F%E8%83%BD%20%E6%BC%94%E7%A4%BA%E5%9B%BE.jpg" width="280px" height="480px"/>
+
+ 
+ 
  
 #### 一，平台简介
 JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）包括了前端uniapp（公众号、H5、小程序）、采集端、运营端、代理商端、充电桩硬件（电动自行车、电动汽车），平台目前服务企业100+，采用SpringBoot、SpringCloud、MySQL、Netty、MQTT、支付宝支付、微信支付、微信退款、支付宝退款等技术栈
@@ -82,7 +92,7 @@ JINGLI 鲸哩充电桩云平台（含硬件充电桩）（v2.3.2）包括了前�
             <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E7%BB%9F%E8%AE%A1-%E7%94%A8%E6%88%B7.jpg"/></td>
         </tr>
     <tr>
-        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/Cdz-%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86-%E5%85%85%E7%94%B5%E6%A1%A9.jpg"/></td>
+        <td><img src="https://wenhui-1251454246.cos.ap-nanjing.myqcloud.com/cdz/v2.3.2/2022.11.10%20%E5%85%85%E7%94%B5%E6%A1%A9PC/LB-2.jpg"/></td>
     </tr>
 </table>
 
@@ -123,6 +133,6 @@ UI：ZLY、ZMD
 
 硬件：亮、峰哥
 
-#### 十二，更新信息：
+#### 十二，我的官方网站：
 
-http://www.nxptdn.com/
+我的官方网站，star star ： [点我访问](http://www.nxptdn.com)
